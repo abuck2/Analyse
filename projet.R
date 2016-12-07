@@ -25,6 +25,7 @@ small_wine$citric.acid<-cat5(small_wine$citric.acid)
 small_wine$residual.sugar<-cat5(small_wine$residual.sugar)
 small_wine$chlorides<-cat5(small_wine$chlorides)
 str(small_wine)
+# a transformer avec for loop sur 1:5 small_wine[,i]
 
 #PCA
-PCA(small_wine[6:11])
+PCA(small_wine[,6:11])
