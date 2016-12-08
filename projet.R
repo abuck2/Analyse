@@ -19,12 +19,10 @@ cat5<-function(vector){
   separations<-c(begin, begin+size, begin+2*size, begin+3*size, begin+4*size, begin+5*size) #Separation entre les categories
   return(cut(vector, separations)) #creation des categories
 } 
-small_wine$fixed.acidity<-cat5(small_wine$fixed.acidity)
-small_wine$volatile.acidity<-cat5(small_wine$volatile.acidity)
-small_wine$citric.acid<-cat5(small_wine$citric.acid)
-small_wine$residual.sugar<-cat5(small_wine$residual.sugar)
-small_wine$chlorides<-cat5(small_wine$chlorides)
+for(i in 1:5){
+  small_wine[,i]<-cat5(small_wine[,i])
+}
 str(small_wine)
 
 #PCA
-PCA(small_wine[6:11])
+PCA(small_wine[,6:11])
