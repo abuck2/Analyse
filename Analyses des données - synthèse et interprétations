@@ -1,0 +1,135 @@
+1. Statistiques descriptives
+	Fonction: numSummary
+	cor
+	cor.test
+	Normalité : Shapiro-wilk
+	QQ.plot
+	Scatterplot.matrix
+
+2. ACP
+2.1 Via rcommander
+2.2 Visualiser les valeurs propres (barplot, plot ...)
+2.3 Trois règles pour retenir les composantes principales
+	Toutes les composantes dont la valeur propre est supérieure à 1
+	Toutes les composantes dont le pourcentage de variance est supérieur à 100/nb var initiales
+	Toutes les composantes se situant avant un coude sur le graphe des valeurs propres
+2.4 Sorties de l'acp:
+	Coord: Coordonnées factorielles
+	Cor: Corrélation entre les variables et les composantes principales
+	Cos2: Mesure qualitative de la projection des points lors de la décomposition spectrale. C'est le carré des
+	coordonnées
+	Contrib : Contribution à l'explication de la variable par chaque variables, dans chacune des comp. principales
+2.5. Inteprétation en fonction des variables
+2.5.1. Quelles variables sont bien représentées sur le plan de l'acp?
+	Il faut qu'il y ait une corrélation forte avec une des composante (la corrélation = la coordonnée)
+	La somme des carrés des corrélations (donc la somme des cos2), s'approche du bord du cercle unité
+2.5.2. Interpréter, composantes par composantes
+	Importance des corrélations et leur sens ( + / - )
+	Contribution des variables dans la composante
+	Qualité de représentation des variables
+	+ considérations théoriques du sujet
+2.5.3. Interpréter cadrant par cadrant
+
+2.5.4. La fonction dimdesc
+	Présente uniquement les variables les plus fortement corrélées avec les composantes principales
+	+ réalise un test t sur la nullité de la corrélation
+	=> super utile pour interpréter les corrélations avec les composantes
+2.6. Interprétation en fonction des INDIVIDUS
+	Les coordonnées = les scores
+	Il faut interpréter simultanément les deux graphiques
+
+2.7. Améliorer la visualisation
+	Dyngraph (problème: deprecated)
+	ggplot2 : probleme: compliqué a utiliser
+
+3. ACM
+3.1. Le test d'indépendance
+	Tester l'indépendance = mesurer l'écart entre les valeurs observées et les valeurs attendues
+	Si ce test permet de détecter une non indépendance, il ne permet pas de mesurer la contribution de chacune
+	des modalités à par rapport au rejet de H0
+3.2. Analyse des correspondances simples (AFCS)
+	Permet de mesurer la contribution des modalités à une non indépendance entre deux variables
+	On peut aussi appliquer l'AFCS sur des valeurs numérique, lorsque la somme des valeurs d'une ligne fait sens
+	(Par exemple un pourcentage additionné, une moyenne de plusieurs variables...)
+	De plus, lorsqu'on additionne toutes les valeurs d'une colonne, on peut aussi tirer du résultat une interprétation pertinente
+3.3 Différences entre AFCS et ACP
+	La standardisation est différente : Au lieu de centrer les valeurs, on divise par la racine du profil moyen
+	La métrique est différente : euclidienne vs chi-carré
+	On obtient une représentation simultanée des variables et des individus
+3.4 Dans R commander: Fonction ca
+	La sortie graphique permet de représenter les modalités des deux méta-variables sur un même plan
+	Profil ligne = individus, profil colonne = variables
+	La projection d'un profil ligne (ou colonne) est égale, à une constante près, à la moyenne pondérée des projections
+	de tous les profils lignes(colonnes)
+	=> Relations quasi barycentriques
+3.4.1 Conséquences en terme d'inteprétation:
+	Des profils proches sont des profils semblables
+	Des profils loins du centre sont éloignés du profil moyen
+	Il est plus intéressant d'analyser les profils éloignés du centre
+	 => dans ce cas, deux profils ligne/colonnes proches = association positive forte
+	    Deux profils éloignés = association négative forte
+3.5 Discrétisation d'une variable continue
+	Utile lorsque la relation entre deux variables n'est pas linéaire
+3.5.1 Possible via la fonction cut ou via les menus rcmdr
+	Plusieurs techniques: via des classes de taille égale, via les quantiles, ou via le clustering (kmeans)
+3.6 Analyse des correspondances multiples
+	Représentation graphique où toutes les modalités des variables initiales + individus sont représentés sur le même plan
+	Proximité et éloignement d'un individu fait sens intrinsèquement
+	Le centre de l'axe à un sens intrisèque aussi
+
+3.6.1. Table disjonctive complète
+	R transforme la base de données initiale en une table disjonctive complète => puis table de Burt
+3.7 Interprétation
+	L'interprétation est basée sur les relations quasi-barycentrique
+	Projection d'une catégorie est, à une constante près, la moyenne des projections des individus qui la compose
+	La projection d'un individu est, à une constante près, la moyenne des projections des modalités auxquelles
+	il appartient
+3.7.1 Intérprétation graphique
+	Modalités proches = beaucoup d'individus en communs = association positive forte
+	Modalitées opposées = peu d'individus en communs = association négative forte
+	Centre du graphe = centre de gravité du nuage de point
+	Les modalité ayant beaucoup de poids seront donc proches du centre
+
+
+4. Le clustering
+4.1 Existe-t-il des groupes naturels dans la base de donnée?
+4.1.1. Le clustering repart d'un problème à p dimensions, sans à priori ni hiérarchie entre les variables
+4.1.2 Choix de la distance
+	Distance numérique = pythagoricienne
+	Distance normalisée = ACP sur matrice de corrélation
+	Distance/proximité entre profils de réponse = distance du khi²
+	Analyse de (dis)similarité d'une table disjonctive
+4.1.2 Choix de l'algorithme
+4.1.2.1 Hiérachique = pas d'a priori sur le nombre de clusters
+	Simple linkage= distance entre les points
+	Average linkage = distances entre groupes déjà formés
+	Ward = décomposition de la variance du nuage de point et minimisation de la perte d'info à chaque étape (meilleur algo)
+4.1.2.2 Partition = Nombre de clusters fixé à priori
+	Moving centers = classement et calcul du nouveau centre de classe à chaque étape
+	K-means = classement et calcul du nouveau centre de classe après chaque classement
+		Kmeans classe un à un les points du nuage, puis calcule le centre
+
+4.1.3 Via r commander
+4.1.3.1 Deux possibilités
+	Retenir tous les facteurs de l'analyse factorielle (conserve toute l'information)
+	Conserver un nombre réduit de facteurs (permet d'éliminer le bruit)
+	
+4.1.3.2 Fonction HCPC
+	res = objet provenant d'une analyse factorielle
+	nb.clust= 0 si choix sur dendrogramme, -1 par r, ou autre valeur pour choix à l'avance
+	consol = contrôle l'étape de consolidation de k-means (true false)
+	metric = metrique choisie
+	method = algorithme choisi
+	nb.par = nombre de parangons édités
+	
+4.1.3.3 Le mieux = comparer plusieurs méthodes de clustering/consolidation etc
+
+4.2 Comment discriminer au mieux des groupes existants?+ Dans quel groupe classer un nouveau venu?
+4.2.1 Analyse discriminante: il faut d'abord faire un clustering et associer chaque observation à son cluster
+4.2.1.1 Package ade4 : discrimin.coa()
+
+	
+
+
+
+
