@@ -17,7 +17,7 @@ shapiwine<-as.data.frame(sapply(wine,shapiro.test)[1:2,])
 
 
 #qqplot
-png(file="qqplot.png", width = 1600, height=1600,pointsize = 40)
+png(file="graph/qqplot.png", width = 1600, height=1600,pointsize = 40)
 par(mfrow=c(3,4))
 myqqplots<-function(index) 
 {
@@ -30,7 +30,7 @@ dev.off()
 
 
 #boxplot 
-png(file="boxplot.png", width = 1600, height=1600,pointsize = 40)
+png(file="graph/boxplot.png", width = 1600, height=1600,pointsize = 40)
 par(mfrow=c(3,4))
 myboxplots<-function(index) 
 {
@@ -94,9 +94,9 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 
 
 multiplot(gg1,gg2,gg3,gg4,gg5,gg6,gg7,gg8,gg9,gg10,gg11,gg12,cols=3)
-savePlot("histogram.png")
+savePlot("graph/histogram.png")
 #scatterplotmatrix en utilisant rcmdr
-png(file="scatterplot.png", width = 1600, height=1600,pointsize = 18)
+png(file="graph/scatterplot.png", width = 1600, height=1600,pointsize = 18)
 winescater<-scatterplotMatrix(~alcohol+chlorides+citric.acid+density+fixed.acidity+free.sulfur.dioxide+pH+quality+residual.sugar+sulphates+total.sulfur.dioxide+volatile.acidity,
                   reg.line=lm, smooth=TRUE, spread=FALSE, span=0.5, ellipse=FALSE, 
                   levels=c(.5, .9), id.n=0, diagonal = 'histogram', data=wine)
