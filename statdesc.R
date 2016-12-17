@@ -12,6 +12,9 @@ statdescwine<-numSummary(wine)[[2]]
 
 corwine <- cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality",
                       "residual.sugar","sulphates","total.sulfur.dioxide","volatile.acidity")], use="complete")
+
+corspearmanwine <-cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality","residual.sugar","sulphates",
+            "total.sulfur.dioxide","volatile.acidity")], method="spearman", use="complete")
 #shapiro wilk test
 shapiwine<-as.data.frame(sapply(wine,shapiro.test)[1:2,])
 
