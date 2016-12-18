@@ -43,6 +43,9 @@ fviz_mca_ind(mc) #graphiques reprenant uniquement les individus
 
 plot(mc, choix = "var")#visualisation des variable
 
-##caracteristiques des categories
+##contributions des categories aux différentes dimensions
 round(var$coord, 2)
 corrplot(var$contrib, is.corr = FALSE)
+fviz_contrib(mc, choice = "var", axes = 1)
+fviz_contrib(mc, choice = "var", axes = 2, top = 10)
+
