@@ -13,11 +13,43 @@
 \maketitle
 \section{Préparation des données}
 
+Avant de procéder à l'analyse proprement dite, il convient de rapidement préparer nos données. Tout d'abord, comme nous ne disposons que de variables continues, il est nécessaire de transformer certaines d'entre elles en variables discrètes afin de pouvoir ultèrieurement procéder à la l'analyse en correspondance multiples. Cette transformation peut être faite en séparant les valeurs des 5 premières variables du dataset, à savoir fixed.acidity, volatile.acidity, citric.acid, residual.sugar and chlorides en 5 intervalles et en attribuant chaque intervalle a une catégorie. 
+
+On peut également faciliter les analyses des sections suivantes en réduisant la taille dataset, comme convenu au préalable avec les assistants. La méthode la plus simple est procéder à un échantillonage. Nous avons décidés ici de nous limiter a garder 200 variables.
+
 \section{PCA}
+
+Nous allons commencer par nous intéresser aux variables continues en effectuant une ACP. Deux premières questions peuvent être posées : à partir de combien de dimensions suffisent à capturer l'essentiel de l'information, et comment les différentes variables contibuent-elles aux premières composantes.
+
+Il nous est possible de répondre à la première question en observant les valeurs propres de l'analyse en composante principale. On peut observer que, comme prévu, la proportion de la variance expliquée par chacune des composantes est décroissante et que les 3 premières composantes permettent d'expliquer pratiquement 75\% de la variance.
+
+Le graphique suivant nous permet d'avoir une illustration visuelle et assez immediate de la proportion de la variance expliquée par chacune des composantes principales :
+
+\begin{center}
+\includegraphics[scale=0.4]{"screeplot"}
+\end{center}
+
+La question de savoir comment les différentes variables contribuent aux deux premières composantes principales peut également être illustrée par un graphique :
+
+\begin{center}
+\includegraphics[scale=0.5]{"factormap"}
+\end{center}
+
+On peut voir sur celui-ci que la première dimension est plus liées au variables "Ph" et "Density", et dans une moindre mesure "sulphates", tandis que la seconde dimension est elle plus liée aux variables "total.sulfur.dioxides" et "free.sulfur.dioxides", qui semblent elles-même proches l'une de l'autres (ce qui n'est naturellement pas surprenant).
+
 
 \section{MCA}
 
-\section{Conslusion}
+L'étape suivante consiste à effectuer une analyse en correspondance multiple. Pour cette analyse nous avond besoin de variables discrètes. La variables "quality" étant déjà une variable discrète, elle sera naturellement utilisée. Pour ce qui est des autres variables, nous les sélectionnerons sur basedu nombres de levels qu'elles prennent si ont les considérait comme factors, afin de prendre celles qui naturellement semblent les plus proches d'une variable discrètes et sur base de la non-linearité de leur relations. Les variables selectionnées seront alcool, citric acid, residual.sugar et free.sulfur, et ces variables seront transformées en variables discrètes avec 5 catégories.
+
+La première question est de savoir combien de  dimensions conserver. Pour répondre à cette question, on peut de nouveau utiliser les varleurs propres et d'inéresser aux dimensions avec les valeurs propres les plus élevées. Si on trace un graphique reprenant les valeurs propres, de la plus élevée à la plus faible, on obtient le graphique suivant : 
+
+\begin{center}
+\includegraphics[scale=0.5]{"mca-eigen"}
+\end{center}
+
+On peut donc constater que la proportion de variance expliquée par les différentes dimensions décroît lentement. Puisqu'il nous faut choisir un nombre de dimensions restreint pour expliquer nos données, il nous faut choisir également un critère de décision. Un premier critère est celui du "coup de coude" : Il s'agit de choisir le nombre de dimension à partir duquel la valeur des valeurs propres décroit brusquement. Un "coup de coude" peut être trouvé aux alentours de la 4eme dimension, mais en ne choisissant que 4 dimensions, on ne peut expliquer que 26\% de la variance. Un second critère consiste à choisir les dimensions pour lesquelles la valeur propres est supérieure à $\frac{1}{nbvar}$. Ce second critère nous pousse à choisir 11 dimensions, ce qui est fort élevé. On pourrait également choisir comme critère le \% de variance expliquée, en fixant par exemple le seuil à 60\%. Ce critère nous pousserait également à choisir 11 variables.
+\section{Conclusion}
 
 
 \section{Annexes}
