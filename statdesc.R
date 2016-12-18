@@ -5,16 +5,23 @@ wine<-read.csv("small_wine.csv", sep = ",")
 wine <- wine[,2:13]
 library(car)
 library(ggplot2)
+library(xtable)
+library(pastecs)
 library(Rcmdr)
 
 #stat descriptives
-statdescwine<-numSummary(wine)[[2]]
+statdescwine<-t(stat.desc(wine,T,T))
+statdescwine<-statdescwine[,c("mean","std.dev","median","min","max")]
+
+statdescwine <-apply(statdescwine,2,round, digits=3)
+xtable(statdescwine)
 
 corwine <- cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality",
                       "residual.sugar","sulphates","total.sulfur.dioxide","volatile.acidity")], use="complete")
 
 corspearmanwine <-cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality","residual.sugar","sulphates",
             "total.sulfur.dioxide","volatile.acidity")], method="spearman", use="complete")
+xtable(corspearmanwine)
 #shapiro wilk test
 shapiwine<-as.data.frame(sapply(wine,shapiro.test)[1:2,])
 

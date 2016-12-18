@@ -6,7 +6,10 @@ library(FactoMineR)
 library(factoextra)
 library(car)
 library(ggplot2)
+library(xtable)
+library(pastecs)
 library(Rcmdr)
+
 
 ## Echantillonage
 #set.seed(5)

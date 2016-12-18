@@ -12,18 +12,31 @@ wine.PCA<-wine[, c("fixed.acidity", "volatile.acidity", "citric.acid", "residual
                    "total.sulfur.dioxide", "density", "pH", "sulphates", "alcohol", "quality")]
 res<-PCA(wine.PCA , scale.unit=TRUE, ncp=5, quanti.sup=c(12: 12), graph = FALSE)
 
+png("graph/pca2.png",width = 1600, height=1600,pointsize = 20)
+par(mfrow=c(2,2))
 
+plot.PCA(res, axes=c(1, 2), choix="ind", habillage="none", col.ind="black", col.ind.sup="blue", 
+         col.quali="magenta", label=c("ind", "ind.sup", "quali"),new.plot=TRUE)
+plot.PCA(res, axes=c(1, 2), choix="var", new.plot=TRUE, col.var="black", col.quanti.sup="blue", 
+         label=c("var", "quanti.sup"), lim.cos2.var=0)
+plot.PCA(res, axes=c(1, 2), choix="ind", habillage="none", col.ind="black", col.ind.sup="blue", 
+         col.quali="magenta", label=c("ind", "ind.sup", "quali"),new.plot=TRUE)
+plot.PCA(res, axes=c(3, 4), choix="var", new.plot=TRUE, col.var="black", col.quanti.sup="blue", 
+         label=c("var", "quanti.sup"), lim.cos2.var=0)
+dev.off()
 
-plot.PCA(res, axes=c(1, 2), choix="ind", habillage="none", col.ind="black", col.ind.sup="blue", col.quali="magenta", label=c("ind", "ind.sup",
-                                                                                                                             "quali"),new.plot=TRUE)
-plot.PCA(res, axes=c(3, 4), choix="var", new.plot=TRUE, col.var="black", col.quanti.sup="blue", label=c("var", "quanti.sup"), lim.cos2.var=0)
+#summay + description + dimdesc 
 summary(res, nb.dec = 3, nbelements=10, nbind = 10, ncp = 3, file="")
 res$eig
 res$var
 res$ind
 res$quanti.sup
-dimdesc(res, axes=1:5)
+dimdescwine<-dimdesc(res, axes=1:5)
 remove(wine.PCA)
+write.infile(res,file="pca2.txt", sep="\t")
+write.infile(dimdescwine,file="pca2dimdesc.txt", sep="\t")
+
+
 
 #clustering ... on peut test avec 2 ou 4 clusters
 res.hcpc<-HCPC(res ,nb.clust=0,consol=F,min=3,max=10,graph=TRUE)
