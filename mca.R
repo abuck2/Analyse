@@ -5,12 +5,12 @@ source("projet.R")
 
 
 ## creation des variables categorielles : 5 categories pour alcool, citric acid, quality, residual.sugar,free.sulfur
-cat5<-function(vector){ 
-  size<-diff(range(vector))/5 #taille des catégories
-  begin<-range(vector)[1] #début de la première categorie
-  separations<-c(begin, begin+size, begin+2*size, begin+3*size, begin+4*size, begin+5*size) #Separation entre les categories
-  return(cut(vector, separations)) #creation des categories
-} 
+cat5<-function(vector){  
+  separations<-c(quantile(vector,seq(0,1,.25)))  #Separations entre les catégories 
+  return(cut(vector, breaks = separations,   #Creation des categories
+             labels=c("low","middle low","middle high","high"),  #Noms des catégories
+             ordered_result = T)) #Variable ordinal
+}
 
 wine$alcohol<-cat5(wine$alcohol)
 wine$citric.acid<-cat5(wine$citric.acid)
@@ -21,13 +21,28 @@ str(wine)
 wine_pca<-wine[,c(3,4,6,11,12)]
 str(wine_pca)
 
-#MCA
+##MCA
 MCA(wine_pca) #MCA : Variables
 mc<-MCA(wine_pca, graph = F)
 mc
 summary(mc)
 
-mc$eig[1:10,] #Valeurs propres
-fviz_screeplot(mc, ncp=15) ##Graphique des valeurs propres qui descendent trop lentement
+#Selection des dimensions
+mc$eig[1:11,]#Valeurs propres
+fviz_screeplot(mc, ncp=21) ##Graphique des valeurs propres qui descendent trop lentement
+sum(mc$eig[,1]>1/5)#Valeurs propres > 1/nbvar
+
+#Visualisation des variables et individus dans le plan formé par les deux premières dimensions
+cat <- get_mca_var(mc)
+categories <- rownames(cat$coord)
+categories
 plot(mc) #Biplot des variables et individus
 fviz_mca_biplot(mc) #Similaire mais en plus beau
+fviz_mca_var(mc) #graphiques reprenant uniquement les catégories
+fviz_mca_ind(mc) #graphiques reprenant uniquement les individus
+
+plot(mc, choix = "var")#visualisation des variable
+
+##caracteristiques des categories
+round(var$coord, 2)
+corrplot(var$contrib, is.corr = FALSE)
