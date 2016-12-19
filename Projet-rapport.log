@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  19 DEC 2016 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  19 DEC 2016 09:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,65 +621,64 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <"screeplot".jpeg, id=14, 645.91313pt x 409.53pt>
 File: "screeplot".jpeg Graphic file (type jpg)
  <use "screeplot".jpeg>
-Package pdftex.def Info: "screeplot".jpeg used on input line 78.
+Package pdftex.def Info: "screeplot".jpeg used on input line 79.
 (pdftex.def)             Requested size: 258.36067pt x 163.80908pt.
 
 <"factormap".jpeg, id=15, 645.91313pt x 409.53pt>
 File: "factormap".jpeg Graphic file (type jpg)
  <use "factormap".jpeg>
-Package pdftex.def Info: "factormap".jpeg used on input line 84.
+Package pdftex.def Info: "factormap".jpeg used on input line 85.
 (pdftex.def)             Requested size: 322.95578pt x 204.7645pt.
 
-[3 <./screeplot.jpeg> <./factormap.jpeg>]
-<"mca-eigen".jpeg, id=19, 645.16031pt x 409.53pt>
+[3 <./screeplot.jpeg>] <"mca-eigen".jpeg, id=19, 645.16031pt x 409.53pt>
 File: "mca-eigen".jpeg Graphic file (type jpg)
- <use "mca-eigen".jpeg>
-Package pdftex.def Info: "mca-eigen".jpeg used on input line 97.
-(pdftex.def)             Requested size: 258.05954pt x 163.80908pt.
 
-<"biplot-mca".jpeg, id=20, 645.16031pt x 409.53pt>
+<use "mca-eigen".jpeg>
+Package pdftex.def Info: "mca-eigen".jpeg used on input line 98.
+(pdftex.def)             Requested size: 258.05954pt x 163.80908pt.
+ [4 <./factormap.jpeg> <./mca-eigen.jpeg>]
+<"biplot-mca".jpeg, id=23, 645.16031pt x 409.53pt>
 File: "biplot-mca".jpeg Graphic file (type jpg)
  <use "biplot-mca".jpeg>
-Package pdftex.def Info: "biplot-mca".jpeg used on input line 105.
+Package pdftex.def Info: "biplot-mca".jpeg used on input line 106.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-[4 <./mca-eigen.jpeg>]
-Overfull \hbox (1.78217pt too wide) in paragraph at lines 108--109
+Overfull \hbox (1.78217pt too wide) in paragraph at lines 109--110
 \OT1/cmr/m/n/10.95 noms des vari-ables), et les in-di-vidus (ronds bleus). On p
 eut ainsi voir quelles cat^^Segories/individus
  []
 
-<"plot-var-mca".jpeg, id=26, 645.16031pt x 409.53pt>
+<"plot-var-mca".jpeg, id=24, 645.16031pt x 409.53pt>
 File: "plot-var-mca".jpeg Graphic file (type jpg)
  <use "plot-var-mca".jpeg>
-Package pdftex.def Info: "plot-var-mca".jpeg used on input line 114.
+Package pdftex.def Info: "plot-var-mca".jpeg used on input line 115.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
 [5 <./biplot-mca.jpeg>] <"histogram".png, id=30, 673.51625pt x 675.52374pt>
 File: "histogram".png Graphic file (type png)
 
 <use "histogram".png>
-Package pdftex.def Info: "histogram".png used on input line 178.
+Package pdftex.def Info: "histogram".png used on input line 179.
 (pdftex.def)             Requested size: 452.9679pt x 454.31993pt.
  <"boxplot".png, id=31, 1606.0pt x 1606.0pt>
 File: "boxplot".png Graphic file (type png)
 
 <use "boxplot".png>
-Package pdftex.def Info: "boxplot".png used on input line 187.
+Package pdftex.def Info: "boxplot".png used on input line 188.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
  <"qqplot".png, id=32, 1606.0pt x 1606.0pt>
 File: "qqplot".png Graphic file (type png)
 
 <use "qqplot".png>
-Package pdftex.def Info: "qqplot".png used on input line 193.
+Package pdftex.def Info: "qqplot".png used on input line 194.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
  [6 <./plot-var-mca.jpeg>] [7 <./histogram.png>] [8 <./boxplot.png>] [9 <./qqpl
 ot.png (PNG copy)>] [10] (./Projet-rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 5926 strings out of 493013
- 76655 string characters out of 6139316
- 192216 words of memory out of 5000000
- 9352 multiletter control sequences out of 15000+600000
+ 5927 strings out of 493013
+ 76663 string characters out of 6139316
+ 191216 words of memory out of 5000000
+ 9353 multiletter control sequences out of 15000+600000
  11698 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,7n,72p,1194b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -691,7 +690,7 @@ re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti10.pfb>
-Output written on Projet-rapport.pdf (10 pages, 856695 bytes).
+Output written on Projet-rapport.pdf (10 pages, 853074 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream

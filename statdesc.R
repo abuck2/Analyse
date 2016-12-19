@@ -27,27 +27,30 @@ shapiwine<-as.data.frame(sapply(wine,shapiro.test)[1:2,])
 
 
 #qqplot
-png(file="graph/qqplot.png", width = 1600, height=1600,pointsize = 40)
-par(mfrow=c(3,4))
+png(file="qqplot.png", width = 1600, height=1600,pointsize = 40)
+
 myqqplots<-function(index) 
 {
   qqPlot(wine[,index], main=names(wine[index]),ylab="sample quantile")
 
 }
-
+par(mfrow=c(3,4), oma=c(0,0,2,0))
 sapply(1:12,FUN=myqqplots)
+title(main="Quantile-quantile plot of normal distribution",outer=T)
 dev.off()
 
 
 #boxplot 
-png(file="graph/boxplot.png", width = 1600, height=1600,pointsize = 40)
-par(mfrow=c(3,4))
+png(file="boxplot.png", width = 1600, height=1600,pointsize = 40)
+
 myboxplots<-function(index) 
 {
   boxplot(wine[,index], main=names(wine[index]))
   
 }
+par(mfrow=c(3,4),oma=c(0,0,2,0))
 sapply(1:12,FUN=myboxplots)
+title(main="Boxplots de toutes les variables",outer=T)
 dev.off()
 
 #plot des histogrammes en utilisant ggplot2

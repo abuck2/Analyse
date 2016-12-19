@@ -15,7 +15,7 @@
 \maketitle
 
 \section{Introduction}
-\paragraph{Description générale}
+\paragraph{Base de donnée}
 Nous avons choisi une base de données en provenance de l'UCI Machine Learning Repository. Celle-ci est composée d'échantillons de vins rouges portuguais, ayant une appelation d'origine contrôlée ``Vinho Verde''. Ce vin provient du nord ouest du Portugal, réparti en 9 sous-régions ayant des sols et des climats différents. Cet éclatement de la production de ce vin à pour conséquence une grande variabilité des propriétés des différents échantillons. Dans ce dataset, chaque observation comporte une analyse des différentes propriétés physico-chimiques du vin, associées à une évaluation subjective, par un \oe nologue, de la qualité de ce vin.
 
 \subsection{Description des variables}
@@ -58,6 +58,8 @@ Afin de mieux comprendre les analyses ultérieures, nous allons brièvement déc
 	\item[pH] Mesurant l'acidité, le pH ne corrèle pas totalement avec les autres variables représentant l'acides, car il est une mesure totale de l'acidité, incluant d'autres acides mineurs non représentés dans ce dataset.
 	\item[Chlorides] C'est la concentration en ions chlorures dans le vin. Ils proviennent de la dissolution du chlorure de sodium (sel). Ils contribuent au goût salé du vin, mais trop de sel peut influencer négativement le goût.
 	\item[Sulphate (sulphate de potassium)] C'est un engrais qui permet de compenser le manque en potassium du sol, favorisant la croissance des vignes. En outre, le sulphate est nécessaire pour la synthèse des protéines de la plante, et à un rôle bénéfique dans la formation de sucres et des composés organoleptiques (qui ont un rôle dans la perception du goût). Il a un effet sur les niveaux de sucres et donc d'alcool.
+	\item[Alcohol] \'Element essentiel du vin, l'éthanol est le produit attendu de la fermentation des levures. Avec le sucre, l'alcool est responsable du goût sucré du vin, et est évidemment un facteur important dans la dégustation de ce vin. Néanmoins, un volume trop important d'alcool peut dégrader l'expérience sensorielle.
+	\item[Quality] C'est l'évaluation subjective, par des experts, de la qualité de l'échantillon de vin.
 \end{description}
 
 \section{Préparation des données}
