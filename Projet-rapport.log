@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  19 DEC 2016 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  19 DEC 2016 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,6 +516,10 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen126
 \@vwid@roff=\dimen127
 ))
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
@@ -530,18 +534,18 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 ) (./Projet-rapport.aux)
 \openout1 = `Projet-rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -606,106 +610,123 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count117
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.66418pt too wide) in paragraph at lines 35--36
+Overfull \hbox (2.66418pt too wide) in paragraph at lines 36--37
 \OT1/cmr/m/n/10.95 C'est une vari-able discr^^Rete, dont le min-i-mum est 0, et
  le max-i-mum est 10. Dans l'^^Sechantillon
  []
 
-[2] [3] <"screeplot".jpeg, id=17, 645.91313pt x 409.53pt>
-File: "screeplot".jpeg Graphic file (type jpg)
+[2] [3] <"screeplotpca".png, id=21, 528.47438pt x 414.79968pt>
+File: "screeplotpca".png Graphic file (type png)
 
-<use "screeplot".jpeg>
-Package pdftex.def Info: "screeplot".jpeg used on input line 95.
-(pdftex.def)             Requested size: 258.36067pt x 163.80908pt.
- <"factormap".jpeg, id=18, 645.91313pt x 409.53pt>
-File: "factormap".jpeg Graphic file (type jpg)
+<use "screeplotpca".png>
+Package pdftex.def Info: "screeplotpca".png used on input line 101.
+(pdftex.def)             Requested size: 317.08707pt x 248.88173pt.
+ <"pca2".png, id=22, 1606.0pt x 803.0pt>
+File: "pca2".png Graphic file (type png)
 
-<use "factormap".jpeg>
-Package pdftex.def Info: "factormap".jpeg used on input line 101.
-(pdftex.def)             Requested size: 322.95578pt x 204.7645pt.
- [4 <./screeplot.jpeg> <./factormap.jpeg>]
-<"mca-eigen".jpeg, id=22, 645.16031pt x 409.53pt>
+<use "pca2".png>
+Package pdftex.def Info: "pca2".png used on input line 113.
+(pdftex.def)             Requested size: 452.9679pt x 226.48033pt.
+ [4 <./screeplotpca.png (PNG copy)>] [5 <./pca2.png (PNG copy)>] <"mca-eigen".j
+peg, id=29, 645.16031pt x 409.53pt>
 File: "mca-eigen".jpeg Graphic file (type jpg)
  <use "mca-eigen".jpeg>
-Package pdftex.def Info: "mca-eigen".jpeg used on input line 114.
+Package pdftex.def Info: "mca-eigen".jpeg used on input line 136.
 (pdftex.def)             Requested size: 258.05954pt x 163.80908pt.
 
-<"biplot-mca".jpeg, id=23, 645.16031pt x 409.53pt>
+[6] <"biplot-mca".jpeg, id=35, 645.16031pt x 409.53pt>
 File: "biplot-mca".jpeg Graphic file (type jpg)
  <use "biplot-mca".jpeg>
-Package pdftex.def Info: "biplot-mca".jpeg used on input line 122.
+Package pdftex.def Info: "biplot-mca".jpeg used on input line 144.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-[5 <./mca-eigen.jpeg>]
-Overfull \hbox (1.78217pt too wide) in paragraph at lines 125--126
+Overfull \hbox (1.78217pt too wide) in paragraph at lines 147--148
 \OT1/cmr/m/n/10.95 noms des vari-ables), et les in-di-vidus (ronds bleus). On p
 eut ainsi voir quelles cat^^Segories/individus
  []
 
-<"plot-var-mca".jpeg, id=29, 645.16031pt x 409.53pt>
+[7 <./mca-eigen.jpeg> <./biplot-mca.jpeg>]
+<"plot-var-mca".jpeg, id=41, 645.16031pt x 409.53pt>
 File: "plot-var-mca".jpeg Graphic file (type jpg)
  <use "plot-var-mca".jpeg>
-Package pdftex.def Info: "plot-var-mca".jpeg used on input line 131.
+Package pdftex.def Info: "plot-var-mca".jpeg used on input line 153.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-[6 <./biplot-mca.jpeg>] <"histogram".png, id=33, 673.51625pt x 675.52374pt>
+[8 <./plot-var-mca.jpeg>] <"histogram".png, id=45, 673.51625pt x 675.52374pt>
 File: "histogram".png Graphic file (type png)
 
 <use "histogram".png>
-Package pdftex.def Info: "histogram".png used on input line 195.
+Package pdftex.def Info: "histogram".png used on input line 219.
 (pdftex.def)             Requested size: 452.9679pt x 454.31993pt.
- <"boxplot".png, id=34, 1606.0pt x 1606.0pt>
+ <"boxplot".png, id=46, 1606.0pt x 1606.0pt>
 File: "boxplot".png Graphic file (type png)
 
 <use "boxplot".png>
-Package pdftex.def Info: "boxplot".png used on input line 204.
+Package pdftex.def Info: "boxplot".png used on input line 228.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- <"qqplot".png, id=35, 1606.0pt x 1606.0pt>
+ <"qqplot".png, id=47, 1606.0pt x 1606.0pt>
 File: "qqplot".png Graphic file (type png)
 
 <use "qqplot".png>
-Package pdftex.def Info: "qqplot".png used on input line 210.
+Package pdftex.def Info: "qqplot".png used on input line 234.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- <"scatterplot".png, id=36, 1606.0pt x 1606.0pt>
+ <"scatterplot".png, id=48, 1606.0pt x 1606.0pt>
 File: "scatterplot".png Graphic file (type png)
 
 <use "scatterplot".png>
-Package pdftex.def Info: "scatterplot".png used on input line 218.
+Package pdftex.def Info: "scatterplot".png used on input line 242.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- [7 <./plot-var-mca.jpeg>] [8 <./histogram.png>]
-[9 <./boxplot.png>] [10 <./qqplot.png (PNG copy)>] [11 <./scatterplot.png (PNG 
-copy)>] [12] (./Projet-rapport.aux) ) 
+ [9] [10 <./histogram.png>] [11 <./boxplot.png>]
+[12 <./qqplot.png (PNG copy)>] [13 <./scatterplot.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pcaind.png, id=66, 1606.0pt x 803.0pt>
+File: pcaind.png Graphic file (type png)
+ <use pcaind.png>
+Package pdftex.def Info: pcaind.png used on input line 321.
+(pdftex.def)             Requested size: 452.9679pt x 226.48033pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] [15 <./pcaind.png>] (./Projet-rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 5934 strings out of 493013
- 76790 string characters out of 6139316
- 191130 words of memory out of 5000000
- 9359 multiletter control sequences out of 15000+600000
- 11698 words of font info for 44 fonts, out of 8000000 for 9000
+ 6035 strings out of 493013
+ 77944 string characters out of 6139316
+ 192846 words of memory out of 5000000
+ 9448 multiletter control sequences out of 15000+600000
+ 14055 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,72p,1194b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Projet-rapport.pdf (12 pages, 2189152 bytes).
+ 40i,8n,72p,1217b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb>
+Output written on Projet-rapport.pdf (15 pages, 2288243 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

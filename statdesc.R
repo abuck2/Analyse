@@ -109,10 +109,10 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 multiplot(gg1,gg2,gg3,gg4,gg5,gg6,gg7,gg8,gg9,gg10,gg11,gg12,cols=3)
 savePlot("graph/histogram.png")
 #scatterplotmatrix en utilisant rcmdr
-png(file="graph/scatterplot.png", width = 1600, height=1600,pointsize = 18)
+png(file="scatterplot.png", width = 1600, height=1600,pointsize = 18)
 winescater<-scatterplotMatrix(~alcohol+chlorides+citric.acid+density+fixed.acidity+free.sulfur.dioxide+pH+quality+residual.sugar+sulphates+total.sulfur.dioxide+volatile.acidity,
                   reg.line=lm, smooth=TRUE, spread=FALSE, span=0.5, ellipse=FALSE, 
-                  levels=c(.5, .9), id.n=0, diagonal = 'histogram', data=wine)
+                  levels=c(.5, .9), id.n=0, diagonal = 'density', data=wine, cex.labels=1.5)
 dev.off()
 
 #faire les boxplot et qqplot en ggplot2

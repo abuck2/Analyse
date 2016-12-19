@@ -36,6 +36,10 @@ remove(wine.PCA)
 write.infile(res,file="pca2.txt", sep="\t")
 write.infile(dimdescwine,file="pca2dimdesc.txt", sep="\t")
 
+#Selection des dimensions
+res$eig[1:11,]#Valeurs propres
+fviz_screeplot(res) ##Graphique des valeurs propres qui descendent trop lentement
+sum(res$eig[,2]>100/11)#Valeurs propres > 1/nbvar
 
 
 #clustering ... on peut test avec 2 ou 4 clusters
