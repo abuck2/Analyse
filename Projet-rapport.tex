@@ -11,6 +11,7 @@
 \usepackage{adjustbox}
 \usepackage{url}
 \usepackage{placeins}
+\usepackage{subfigure}
 \lstloadlanguages{R}
 \begin{document}
 \maketitle
@@ -152,7 +153,8 @@ On peut aussi ne s'intéresser qu'aux variables analysées et tracer un graphiqu
 \begin{center}
 \includegraphics[scale=0.6]{"plot-var-mca"}
 \end{center}
- Aucune des variables ne semble être particulièrement associée avec l'un ou l'autre axe.
+
+Aucune des variables ne semble ici être particulièrement associée avec l'un ou l'autre axe.
 
 \section{Conclusion}
 
@@ -323,6 +325,34 @@ On peut aussi ne s'intéresser qu'aux variables analysées et tracer un graphiqu
 	\label{fig:pcaind}
 \end{figure}
 \FloatBarrier
+
+\section{Clustering}
+
+Il est également possible de regrouper les données en cluster sur base de la PCA. Différentes méthodes seront utilisées ici, toutes seront initialement appliquées aux résultats de la PCA. La première est la méthode ward, vue au cours, minimisant la perte d'information en décomposant l inertie du nuage de points. La seconde méthode sera le complete linkage et la troisième sera le complete linkage. Des graphiques représentant les cluster en couleurs, et les données dans le plan formé par les deux premières dimensions nous permettrons d'évaluer visuellement la pertinence de chacune des méthode. Le nombre de cluster  sélectionné sera celui choisi automatiquement par HCPC, et variera donc suivant la méthode utilisée. Les graphiques pour les trois méthodes (ward, complete linkage et single linkage respectivement) sont les suivants :
+
+
+
+
+\begin{figure}[t]
+\centering
+\subfigure[single linkage]{
+\includegraphics[width=.4\textwidth]{"single-pca"}
+}
+\subfigure[complete linkage]{
+\includegraphics[width=.4\textwidth]{"complete-pca"}
+}
+\subfigure[ward]{
+\includegraphics[width=.4\textwidth]{"ward-pca"}
+}
+
+\caption{Comparaison des méthode de clustering}
+\label{fig:whatever}
+\end{figure}
+\newpage
+
+On peut voir que le simple linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents!
+
+\bigskip
 \section{Code R}
 \lstset{language=R}
 \begin{lstlisting}[breaklines]
