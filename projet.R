@@ -1,6 +1,6 @@
 ## setup
 rm(list=ls())
-setwd("/home/alexis/Documents/stats/annee2/analyse/data/")
+setwd("/home/alexis/Documents/stats/annee2/analyse/projet/")
 #wine<-read.csv("winequality-red.csv", sep = ";")
 library(FactoMineR)
 library(factoextra)
@@ -10,7 +10,9 @@ library(xtable)
 library(pastecs)
 library(Rcmdr)
 library(ade4)
-
+source("FDA_function.R")
+source("plot.FDA_function.R")
+source("dimdesc.FDA_function.R")
 
 ## Echantillonage
 #set.seed(5)
