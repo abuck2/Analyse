@@ -5,42 +5,52 @@ wine<-read.csv("small_wine.csv", sep = ",")
 wine <- wine[,2:13]
 library(car)
 library(ggplot2)
+library(xtable)
+library(pastecs)
 library(Rcmdr)
 
 #stat descriptives
-statdescwine<-numSummary(wine)[[2]]
+statdescwine<-t(stat.desc(wine,T,T))
+statdescwine<-statdescwine[,c("mean","std.dev","median","min","max")]
+
+statdescwine <-apply(statdescwine,2,round, digits=3)
+xtable(statdescwine)
 
 corwine <- cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality",
                       "residual.sugar","sulphates","total.sulfur.dioxide","volatile.acidity")], use="complete")
 
 corspearmanwine <-cor(wine[,c("alcohol","chlorides","citric.acid","density","fixed.acidity","free.sulfur.dioxide","pH","quality","residual.sugar","sulphates",
             "total.sulfur.dioxide","volatile.acidity")], method="spearman", use="complete")
+xtable(corspearmanwine)
 #shapiro wilk test
 shapiwine<-as.data.frame(sapply(wine,shapiro.test)[1:2,])
 
 
 #qqplot
-png(file="graph/qqplot.png", width = 1600, height=1600,pointsize = 40)
-par(mfrow=c(3,4))
+png(file="qqplot.png", width = 1600, height=1600,pointsize = 40)
+
 myqqplots<-function(index) 
 {
   qqPlot(wine[,index], main=names(wine[index]),ylab="sample quantile")
 
 }
-
+par(mfrow=c(3,4), oma=c(0,0,2,0))
 sapply(1:12,FUN=myqqplots)
+title(main="Quantile-quantile plot of normal distribution",outer=T)
 dev.off()
 
 
 #boxplot 
-png(file="graph/boxplot.png", width = 1600, height=1600,pointsize = 40)
-par(mfrow=c(3,4))
+png(file="boxplot.png", width = 1600, height=1600,pointsize = 40)
+
 myboxplots<-function(index) 
 {
   boxplot(wine[,index], main=names(wine[index]))
   
 }
+par(mfrow=c(3,4),oma=c(0,0,2,0))
 sapply(1:12,FUN=myboxplots)
+title(main="Boxplots de toutes les variables",outer=T)
 dev.off()
 
 #plot des histogrammes en utilisant ggplot2
@@ -99,10 +109,10 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
 multiplot(gg1,gg2,gg3,gg4,gg5,gg6,gg7,gg8,gg9,gg10,gg11,gg12,cols=3)
 savePlot("graph/histogram.png")
 #scatterplotmatrix en utilisant rcmdr
-png(file="graph/scatterplot.png", width = 1600, height=1600,pointsize = 18)
+png(file="scatterplot.png", width = 1600, height=1600,pointsize = 18)
 winescater<-scatterplotMatrix(~alcohol+chlorides+citric.acid+density+fixed.acidity+free.sulfur.dioxide+pH+quality+residual.sugar+sulphates+total.sulfur.dioxide+volatile.acidity,
                   reg.line=lm, smooth=TRUE, spread=FALSE, span=0.5, ellipse=FALSE, 
-                  levels=c(.5, .9), id.n=0, diagonal = 'histogram', data=wine)
+                  levels=c(.5, .9), id.n=0, diagonal = 'density', data=wine, cex.labels=1.5)
 dev.off()
 
 #faire les boxplot et qqplot en ggplot2

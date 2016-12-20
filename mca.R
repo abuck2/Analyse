@@ -30,7 +30,7 @@ summary(mc)
 #Selection des dimensions
 mc$eig[1:11,]#Valeurs propres
 fviz_screeplot(mc, ncp=21) ##Graphique des valeurs propres qui descendent trop lentement
-sum(mc$eig[,1]>1/5)#Valeurs propres > 1/nbvar
+sum(mc$eig[,2]>100/21)#pourcentage de variance > 100/dim
 
 #Visualisation des variables et individus dans le plan formé par les deux premières dimensions
 cat <- get_mca_var(mc)

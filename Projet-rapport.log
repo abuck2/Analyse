@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.27)  18 DEC 2016 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.27)  20 DEC 2016 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,6 +466,63 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count108
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box30
+)
+\tc@llx=\dimen118
+\tc@lly=\dimen119
+\tc@urx=\dimen120
+\tc@ury=\dimen121
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen122
+\adjbox@Height=\dimen123
+\adjbox@Depth=\dimen124
+\adjbox@Totalheight=\dimen125
+
+(/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count109
+)
+(/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box31
+\sift@deathcycles=\count110
+\@vwid@loff=\dimen126
+\@vwid@roff=\dimen127
+))
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -477,32 +534,32 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 ) (./Projet-rapport.aux)
 \openout1 = `Projet-rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen118
-\scratchbox=\box30
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen119
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count111
+\scratchdimen=\dimen128
+\scratchbox=\box32
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen129
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -552,76 +609,124 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count114
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+\c@lstlisting=\count117
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<"screeplot".jpeg, id=1, 645.91313pt x 409.53pt>
-File: "screeplot".jpeg Graphic file (type jpg)
- <use "screeplot".jpeg>
-Package pdftex.def Info: "screeplot".jpeg used on input line 29.
-(pdftex.def)             Requested size: 258.36067pt x 163.80908pt.
+) [1
 
-<"factormap".jpeg, id=2, 645.91313pt x 409.53pt>
-File: "factormap".jpeg Graphic file (type jpg)
- <use "factormap".jpeg>
-Package pdftex.def Info: "factormap".jpeg used on input line 35.
-(pdftex.def)             Requested size: 322.95578pt x 204.7645pt.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (2.66418pt too wide) in paragraph at lines 36--37
+\OT1/cmr/m/n/10.95 C'est une vari-able discr^^Rete, dont le min-i-mum est 0, et
+ le max-i-mum est 10. Dans l'^^Sechantillon
+ []
 
-[1
+[2] [3] <"screeplotpca".png, id=21, 528.47438pt x 414.79968pt>
+File: "screeplotpca".png Graphic file (type png)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./screeplot.jpeg>]
-<"mca-eigen".jpeg, id=12, 645.16031pt x 409.53pt>
+<use "screeplotpca".png>
+Package pdftex.def Info: "screeplotpca".png used on input line 101.
+(pdftex.def)             Requested size: 317.08707pt x 248.88173pt.
+ <"pca2".png, id=22, 1606.0pt x 803.0pt>
+File: "pca2".png Graphic file (type png)
+
+<use "pca2".png>
+Package pdftex.def Info: "pca2".png used on input line 113.
+(pdftex.def)             Requested size: 452.9679pt x 226.48033pt.
+ [4 <./screeplotpca.png (PNG copy)>] [5 <./pca2.png (PNG copy)>] <"mca-eigen".j
+peg, id=29, 645.16031pt x 409.53pt>
 File: "mca-eigen".jpeg Graphic file (type jpg)
  <use "mca-eigen".jpeg>
-Package pdftex.def Info: "mca-eigen".jpeg used on input line 48.
+Package pdftex.def Info: "mca-eigen".jpeg used on input line 136.
 (pdftex.def)             Requested size: 258.05954pt x 163.80908pt.
 
-[2 <./factormap.jpeg> <./mca-eigen.jpeg>]
-<"biplot-mca".jpeg, id=16, 645.16031pt x 409.53pt>
+[6] <"biplot-mca".jpeg, id=35, 645.16031pt x 409.53pt>
 File: "biplot-mca".jpeg Graphic file (type jpg)
  <use "biplot-mca".jpeg>
-Package pdftex.def Info: "biplot-mca".jpeg used on input line 56.
+Package pdftex.def Info: "biplot-mca".jpeg used on input line 144.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-Overfull \hbox (1.78217pt too wide) in paragraph at lines 59--60
+Overfull \hbox (1.78217pt too wide) in paragraph at lines 147--148
 \OT1/cmr/m/n/10.95 noms des vari-ables), et les in-di-vidus (ronds bleus). On p
 eut ainsi voir quelles cat^^Segories/individus
  []
 
-<"plot-var-mca".jpeg, id=17, 645.16031pt x 409.53pt>
+[7 <./mca-eigen.jpeg> <./biplot-mca.jpeg>]
+<"plot-var-mca".jpeg, id=41, 645.16031pt x 409.53pt>
 File: "plot-var-mca".jpeg Graphic file (type jpg)
  <use "plot-var-mca".jpeg>
-Package pdftex.def Info: "plot-var-mca".jpeg used on input line 65.
+Package pdftex.def Info: "plot-var-mca".jpeg used on input line 153.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-[3 <./biplot-mca.jpeg>] [4 <./plot-var-mca.jpeg>] (./Projet-rapport.aux) ) 
+[8 <./plot-var-mca.jpeg>] <"histogram".png, id=45, 673.51625pt x 675.52374pt>
+File: "histogram".png Graphic file (type png)
+
+<use "histogram".png>
+Package pdftex.def Info: "histogram".png used on input line 219.
+(pdftex.def)             Requested size: 452.9679pt x 454.31993pt.
+ <"boxplot".png, id=46, 1606.0pt x 1606.0pt>
+File: "boxplot".png Graphic file (type png)
+
+<use "boxplot".png>
+Package pdftex.def Info: "boxplot".png used on input line 228.
+(pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
+ <"qqplot".png, id=47, 1606.0pt x 1606.0pt>
+File: "qqplot".png Graphic file (type png)
+
+<use "qqplot".png>
+Package pdftex.def Info: "qqplot".png used on input line 234.
+(pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
+ <"scatterplot".png, id=48, 1606.0pt x 1606.0pt>
+File: "scatterplot".png Graphic file (type png)
+
+<use "scatterplot".png>
+Package pdftex.def Info: "scatterplot".png used on input line 242.
+(pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
+ [9] [10 <./histogram.png>] [11 <./boxplot.png>]
+[12 <./qqplot.png (PNG copy)>] [13 <./scatterplot.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<pcaind.png, id=66, 1606.0pt x 803.0pt>
+File: pcaind.png Graphic file (type png)
+ <use pcaind.png>
+Package pdftex.def Info: pcaind.png used on input line 321.
+(pdftex.def)             Requested size: 452.9679pt x 226.48033pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] [15 <./pcaind.png>] (./Projet-rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 5142 strings out of 493013
- 64211 string characters out of 6139316
- 153473 words of memory out of 5000000
- 8611 multiletter control sequences out of 15000+600000
- 11083 words of font info for 42 fonts, out of 8000000 for 9000
+ 6035 strings out of 493013
+ 77944 string characters out of 6139316
+ 192912 words of memory out of 5000000
+ 9448 multiletter control sequences out of 15000+600000
+ 14055 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,40p,1194b,1736s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Projet-rapport.pdf (4 pages, 497157 bytes).
+ 40i,8n,72p,1217b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb>
+Output written on Projet-rapport.pdf (15 pages, 2288232 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
