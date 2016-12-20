@@ -154,14 +154,50 @@ On peut aussi ne s'intéresser qu'aux variables analysées et tracer un graphiqu
 \includegraphics[scale=0.6]{"plot-var-mca"}
 \end{center}
 
-Aucune des variables ne semble ici être particulièrement associée avec l'un ou l'autre axe.
+Aucune des variables ne semble ici être particulièrement associée avec l'un ou l'autre axe. On peut aussi représenter graphiquement quelle catégorie est associée avec chacune des 5 premières dimensions grâce au graphique suivant  (agrandi en annexe) : 
+
+%Correlation entre variable discrete??
+\begin{center}
+\includegraphics[scale=0.4]{"contrib"}
+\end{center}
+
+En conclusion, la MCA nous permet de réduire efficacement le nombre de dimensions, et les deux variables qui semblent être le plus étroitement associées sont le taux d'alcool et la qualité du vin.
+
+\section{Clustering}
+
+Il est également possible de regrouper les données en cluster sur base de la PCA. Différentes méthodes seront utilisées ici, toutes seront initialement appliquées aux résultats de la PCA. La première est la méthode ward, vue au cours, minimisant la perte d'information en décomposant l inertie du nuage de points. La seconde méthode sera le complete linkage et la troisième sera le complete linkage. Des graphiques représentant les cluster en couleurs, et les données dans le plan formé par les deux premières dimensions nous permettrons d'évaluer visuellement la pertinence de chacune des méthode. Le nombre de cluster  sélectionné sera celui choisi automatiquement par HCPC, et variera donc suivant la méthode utilisée. Les graphiques pour les trois méthodes (ward, complete linkage et single linkage respectivement) sont les suivants (agrandis en annexe):
+
+
+
+
+\begin{center}
+
+\includegraphics[width=.4\textwidth]{"single-pca"}
+
+
+\includegraphics[width=.4\textwidth]{"complete-pca"}
+
+
+\includegraphics[width=.4\textwidth]{"ward-pca"}
+
+
+\end{center}
+
+
+On peut voir que le single linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents!
+
+
+Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'intéresser à comment classifier une nouvelles données dans ces catégories formées par clustering. Cette classification peut être faite en utilisant la fonction FDA fournie au TP, ou discrim.coa.
+
+
+
 
 \section{Conclusion}
 
 \newpage
 \section{Annexes}
 \appendix
-\section{Matrice de corrélation}
+\subsection{Matrice de corrélation}
 \label{sec:cor}
 \begin{table}[h]
 	\centering
@@ -189,7 +225,7 @@ Aucune des variables ne semble ici être particulièrement associée avec l'un o
 \label{table:cor}
 \end{table}
 \FloatBarrier
-\section{Normalité}
+\subsection{Normalité}
 \label{sec:normalite}
 \begin{table}[h]
 	\centering
@@ -248,7 +284,7 @@ Aucune des variables ne semble ici être particulièrement associée avec l'un o
 \end{figure}
 \FloatBarrier
 
-\section{Autres sorties de l'analyse en composantes principales}
+\subsection{Autres sorties de l'analyse en composantes principales}
 \label{sec:eigpca}
 \begin{table}[h]
 	\centering
@@ -325,37 +361,38 @@ Aucune des variables ne semble ici être particulièrement associée avec l'un o
 	\label{fig:pcaind}
 \end{figure}
 \FloatBarrier
-
-\section{Clustering}
-
-Il est également possible de regrouper les données en cluster sur base de la PCA. Différentes méthodes seront utilisées ici, toutes seront initialement appliquées aux résultats de la PCA. La première est la méthode ward, vue au cours, minimisant la perte d'information en décomposant l inertie du nuage de points. La seconde méthode sera le complete linkage et la troisième sera le complete linkage. Des graphiques représentant les cluster en couleurs, et les données dans le plan formé par les deux premières dimensions nous permettrons d'évaluer visuellement la pertinence de chacune des méthode. Le nombre de cluster  sélectionné sera celui choisi automatiquement par HCPC, et variera donc suivant la méthode utilisée. Les graphiques pour les trois méthodes (ward, complete linkage et single linkage respectivement) sont les suivants :
+\subsection{Analyse de la MCA}
 
 
+\begin{figure}
 
+\includegraphics[width=\textwidth,keepaspectratio]{contrib}
+
+\caption{Contributions des différente catégories}
+\label{fig:contrib}
+\end{figure}
+
+\subsection{Clustering}
 
 \begin{figure}[t]
 \centering
 \subfigure[single linkage]{
-\includegraphics[width=.4\textwidth]{"single-pca"}
+\includegraphics[width=.8\textwidth]{"single-pca"}
 }
 \subfigure[complete linkage]{
-\includegraphics[width=.4\textwidth]{"complete-pca"}
+\includegraphics[width=.8\textwidth]{"complete-pca"}
 }
 \subfigure[ward]{
-\includegraphics[width=.4\textwidth]{"ward-pca"}
+\includegraphics[width=.8\textwidth]{"ward-pca"}
 }
 
 \caption{Comparaison des méthode de clustering}
 \label{fig:whatever}
 \end{figure}
-\newpage
-
-On peut voir que le simple linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents!
 
 
-Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'intéresser à comment classifier une nouvelles données dans ces catégories formées par clustering. Cette classification peut être faite en utilisant la fonction FDA fournie au TP, ou discrim.coa.
 
-\bigskip
+
 \section{Code R}
 \lstset{language=R}
 \begin{lstlisting}[breaklines]
