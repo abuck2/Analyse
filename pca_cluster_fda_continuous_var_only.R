@@ -49,5 +49,3 @@ xtable(res$eig, digits=3)
 
 
 
-#FDA en utilisant le code de cedric taverne ... permet de discriminer les 2 groupes
-res2<-FDA(winehcpc[,1:11],groups = winehcpc$clust )

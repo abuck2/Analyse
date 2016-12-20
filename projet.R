@@ -9,6 +9,7 @@ library(ggplot2)
 library(xtable)
 library(pastecs)
 library(Rcmdr)
+library(ade4)
 
 
 ## Echantillonage

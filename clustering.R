@@ -14,8 +14,7 @@ res.hcpc$desc.var
 res.hcpc$desc.axes
 res.hcpc$desc.ind
 
-winehcpc<- res.hcpc$data.clust
-
 res.hcpc_c<-HCPC(res ,nb.clust=0,consol=F,min=3,max=10,graph=TRUE, method = "complete")
 res.hcpc_c<-HCPC(res ,nb.clust=0,consol=F,min=3,max=10,graph=TRUE, method = "single")
 
+winehcpc<- res.hcpc$data.clust
