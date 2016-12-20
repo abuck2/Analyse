@@ -352,6 +352,9 @@ Il est également possible de regrouper les données en cluster sur base de la P
 
 On peut voir que le simple linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents!
 
+
+Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'intéresser à comment classifier une nouvelles données dans ces catégories formées par clustering. Cette classification peut être faite en utilisant la fonction FDA fournie au TP, ou discrim.coa.
+
 \bigskip
 \section{Code R}
 \lstset{language=R}

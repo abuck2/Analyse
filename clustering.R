@@ -18,3 +18,9 @@ res.hcpc_c<-HCPC(res ,nb.clust=0,consol=F,min=3,max=10,graph=TRUE, method = "com
 res.hcpc_c<-HCPC(res ,nb.clust=0,consol=F,min=3,max=10,graph=TRUE, method = "single")
 
 winehcpc<- res.hcpc$data.clust
+
+
+#FDA 
+discrimin.coa( wine, (res.hcpc$data.clust)$clust, scan = FALSE)
+
+res2<-FDA(winehcpc[,1:11],groups = winehcpc$clust )
