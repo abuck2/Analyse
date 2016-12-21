@@ -137,7 +137,7 @@ La première question est de savoir combien de  dimensions conserver. Pour répo
 \includegraphics[scale=0.4]{"mca-eigen"}
 \end{center}
 
-On peut donc constater que la proportion de variance expliquée par les différentes dimensions décroît lentement. Puisqu'il nous faut choisir un nombre de dimensions restreint pour expliquer nos données, il nous faut choisir également un critère de décision. Un premier critère est celui du "coup de coude" : Il s'agit de choisir le nombre de dimension à partir duquel la valeur des valeurs propres décroit brusquement. Un "coup de coude" peut être trouvé a plusieurs endroits, entre autre aux alentours de la 4eme dimension (mais également après deux dimensions), mais en ne choisissant que 4 dimensions, on ne peut expliquer que 30\% de la variance. Un second critère consiste à choisir les dimensions pour lesquelles la valeur propres est supérieure à $\frac{1}{nbvar}$. Ce second critère nous pousse à choisir 10 dimensions, ce qui est fort élevé. On pourrait également choisir comme critère le \% de variance expliquée, en fixant par exemple le seuil à 60\%. Ce critère nous pousserait également à choisir 10 variables. On utilisera  donc au final les 4 premières dimensions.\bigskip
+On peut donc constater que la proportion de variance expliquée par les différentes dimensions décroît lentement. Puisqu'il nous faut choisir un nombre de dimensions restreint pour expliquer nos données, il nous faut choisir également un critère de décision. Un premier critère est celui du "coude" : Il s'agit de choisir le nombre de dimension à partir duquel la valeur des valeurs propres décroit brusquement. Un "coude" peut être trouvé a plusieurs endroits, entre autre aux alentours de la 4eme dimension (mais également après deux dimensions), mais en ne choisissant que 4 dimensions, on ne peut expliquer que 30\% de la variance. Un second critère consiste à choisir les dimensions pour lesquelles la variance est supérieure à $\frac{1}{nbdim}$. Ce second critère nous pousse à choisir 9 dimensions, ce qui est fort élevé. On pourrait également choisir comme critère le \% de variance expliquée, en fixant par exemple le seuil à 60\%. Ce critère nous pousserait également à choisir 10 variables. On utilisera  donc au final les 4 premières dimensions.\bigskip
 
 On peut également s'intéresser aux positions des individus et categories dans les deux premières dimensions :
 
@@ -145,7 +145,7 @@ On peut également s'intéresser aux positions des individus et categories dans 
 \includegraphics[scale=0.6]{"biplot-mca"}
 \end{center}
 
-Sur ce graphique, on peut observer les catégories des variables (triangles rouges associés aux noms des variables), et les individus (ronds bleus). On peut ainsi voir quelles catégories/individus sont similaires. En l'occurence, le graphe est un peu difficile à comprendre du fait que la plupart des valeurs sont proches de l'origine, à l'exeption de deux outliers et des valeurs correspondant aux valeurs manquantes pour alcohol et residual.sugar qui s'en éloignent singulièrement. Néanmoins on peut déjà observer une certaine similarité entre les catégories "basses" de residual.sugar, citric.acid et alcohol, et on peut constater que alcohol "low" et alcohol "high" sont chacun à une des extremites de l'axe correspondant à la première dimension. La première dimension semble donc correspondre essentiellement au taux d'alcool dans le vin. On pourra vérifier cela ultérieurement en observant les contributions des différentes variables au premières dimensions. Finalement les vins de mauvaise qualité (4) se trouvent du coté gauche (alcohol low) tandis que les vins de bonne qualité (7) se trouvent du coté droit (alcohol high). \bigskip
+Sur ce graphique, on peut observer les catégories des variables (triangles rouges associés aux noms des variables), et les individus (ronds bleus). On peut ainsi voir quelles catégories/individus sont similaires. En l'occurence, le graphe est un peu difficile à comprendre du fait que la plupart des valeurs sont proches de l'origine, à l'exception de deux outliers et des valeurs correspondant aux valeurs manquantes pour alcohol et residual.sugar qui s'en éloignent singulièrement. Néanmoins on peut déjà observer une certaine similarité entre les catégories "basses" de residual.sugar, citric.acid et alcohol, et on peut constater que alcohol "low" et alcohol "high" sont chacun à une des extrémités de l'axe correspondant à la première dimension. La première dimension semble donc correspondre essentiellement au taux d'alcool dans le vin. On pourra vérifier cela ultérieurement en observant les contributions des différentes variables au premières dimensions. Finalement les vins de mauvaise qualité (4) se trouvent du coté gauche (alcohol low) tandis que les vins de bonne qualité (7) se trouvent du coté droit (alcohol high). \bigskip
 
 On peut aussi ne s'intéresser qu'aux variables analysées et tracer un graphique des coordonnées des variables dans le plan formé par les deux premières dimensions :
 %The squared correlations between variables and the dimensions are used as coordinates.
@@ -170,34 +170,38 @@ Il est également possible de regrouper les données en cluster sur base de la P
 
 
 
-\begin{center}
+\begin{figure}[ht]
+	\centering
+	\subfigure[single linkage]{
+		\includegraphics[width=.4\textwidth]{"single-pca"}
+	}
+	\subfigure[complete linkage]{
+		\includegraphics[width=.4\textwidth]{"complete-pca"}
+	}
+	\subfigure[ward]{
+		\includegraphics[width=.4\textwidth]{"ward-pca"}
+	}
+	
+	\caption{Comparaison des méthode de clustering}
 
-\includegraphics[width=.4\textwidth]{"single-pca"}
+\end{figure}
 
 
-\includegraphics[width=.4\textwidth]{"complete-pca"}
+On peut voir que le single linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents.
 
-
-\includegraphics[width=.4\textwidth]{"ward-pca"}
-
-
-\end{center}
-
-
-On peut voir que le single linkage n'est pas du tout satisfaisant : deux des clusters ne contiennent qu'un seul point tandis que le troisième cluster reprend l'ensemble des autres données. Le complete linkage est légèrement meilleur : les clusters 1 et 3 semblent avoir du sens, mais le cluster 4 ne comprend de nouveau qu'un seul point et le cluster 2 ne semble pas très homogène. La méthode de ward fournit de bien meilleurs résultats et nous obtenons ici des clusters qui semblent cohérents!
-
-
-Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'intéresser à comment classifier une nouvelles données dans ces catégories formées par clustering. Cette classification peut être faite en utilisant la fonction FDA fournie au TP, ou discrim.coa.
-
+Ainsi, on peut observer plusieurs groupes d'individus se distinguer dans le nuage de point. A ce stade, il est très difficile d'interpréter ce clustering étant donné que chaque échantillon est anonyme; Il est impossible de savoir à quelle catégorie/origine géographiques chaque échantillon appartiens. Il est possible que ce clustering permet de séparer les échantillons en fonction de la sous-région géographique. Peut-être aussi que ce clustering sépare naturellement chaque vin en classe de qualité. Néanmoins, étant donné que le nuage de point est concentré autour de l'origine, les échantillons ne sont pas clairement séparés en groupes distincts.
 
 
 
 \section{Conclusion}
 
+Ce projet a montré plusieurs techniques pour explorer des données multivariées à priori complexe. Nous avons pu réduire efficacement les dimensions en perdant le moins possible d'information. Ceci nous à permis de représenter plus simplement les relations entre variable, permettant de faire sens là où une grande matrice de corrélation est impossible à interpréter.
+
+
 \newpage
 \section{Annexes}
 \appendix
-\subsection{Matrice de corrélation}
+\section{Matrice de corrélation}
 \label{sec:cor}
 \begin{table}[h]
 	\centering
@@ -225,7 +229,7 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \label{table:cor}
 \end{table}
 \FloatBarrier
-\subsection{Normalité}
+\section{Normalité}
 \label{sec:normalite}
 \begin{table}[h]
 	\centering
@@ -284,7 +288,7 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \end{figure}
 \FloatBarrier
 
-\subsection{Autres sorties de l'analyse en composantes principales}
+\section{Autres sorties de l'analyse en composantes principales}
 \label{sec:eigpca}
 \begin{table}[h]
 	\centering
@@ -361,10 +365,10 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 	\label{fig:pcaind}
 \end{figure}
 \FloatBarrier
-\subsection{Analyse de la MCA}
+\section{Analyse de la MCA}
 
 
-\begin{figure}
+\begin{figure}[ht]
 
 \includegraphics[width=\textwidth,keepaspectratio]{contrib}
 
@@ -374,7 +378,7 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 
 
 
-\begin{figure}
+\begin{figure}[ht]
 
 \includegraphics[width=\textwidth,keepaspectratio]{"biplot-mca"}
 
@@ -382,7 +386,7 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \label{fig:biplot}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[ht]
 
 \includegraphics[width=\textwidth,keepaspectratio]{"biplot-nona"}
 
@@ -391,20 +395,19 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[ht]
 
 \includegraphics[width=\textwidth,keepaspectratio]{"mca-eigen"}
 
-\caption{Valeurs propres de la NCA}
+\caption{Valeurs propres de la MCA}
 \label{fig:screeplot}
 \end{figure}
 
-\FloatBarrier
 
 
-\subsection{Clustering}
+\section{Clustering}
 
-\begin{figure}[t]
+\begin{figure}[ht]
 \centering
 \subfigure[single linkage]{
 \includegraphics[width=.8\textwidth]{"single-pca"}

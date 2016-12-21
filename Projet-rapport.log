@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.27)  20 DEC 2016 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  21 DEC 2016 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,7 +551,11 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) (./Projet-rapport.aux)
+) (./Projet-rapport.aux
+
+LaTeX Warning: Label `fig:biplot' multiply defined.
+
+)
 \openout1 = `Projet-rapport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -566,8 +570,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen130
@@ -684,87 +687,138 @@ File: "plot-var-mca".jpeg Graphic file (type jpg)
 Package pdftex.def Info: "plot-var-mca".jpeg used on input line 154.
 (pdftex.def)             Requested size: 387.09917pt x 245.7199pt.
 
-[8 <./plot-var-mca.jpeg>] <"histogram".png, id=45, 673.51625pt x 675.52374pt>
+<"contrib".jpeg, id=42, 645.16031pt x 409.53pt>
+File: "contrib".jpeg Graphic file (type jpg)
+ <use "contrib".jpeg>
+Package pdftex.def Info: "contrib".jpeg used on input line 161.
+(pdftex.def)             Requested size: 258.05954pt x 163.80908pt.
+ [8 <./plot-var-mca.jpeg> <./contrib.jpeg>]
+<"single-pca".jpeg, id=46, 645.16031pt x 409.53pt>
+File: "single-pca".jpeg Graphic file (type jpg)
+ <use "single-pca".jpeg>
+Package pdftex.def Info: "single-pca".jpeg used on input line 177.
+(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
+
+<"complete-pca".jpeg, id=47, 645.16031pt x 409.53pt>
+File: "complete-pca".jpeg Graphic file (type jpg)
+ <use "complete-pca".jpeg>
+Package pdftex.def Info: "complete-pca".jpeg used on input line 180.
+(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
+
+<"ward-pca".jpeg, id=48, 645.16031pt x 409.53pt>
+File: "ward-pca".jpeg Graphic file (type jpg)
+ <use "ward-pca".jpeg>
+Package pdftex.def Info: "ward-pca".jpeg used on input line 183.
+(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
+ [9 <./single-pca.jpeg> <./complete-pca.jpeg> <./ward-pca.jpeg>]
+Overfull \hbox (16.86876pt too wide) in paragraph at lines 198--199
+\OT1/cmr/m/n/10.95 plexe. Nous avons pu r^^Seduire ef-fi-cace-ment les di-men-s
+ions en per-dant le moins pos-si-ble d'information.
+ []
+
+[10] <"histogram".png, id=55, 673.51625pt x 675.52374pt>
 File: "histogram".png Graphic file (type png)
-
-<use "histogram".png>
-Package pdftex.def Info: "histogram".png used on input line 221.
+ <use "histogram".png>
+Package pdftex.def Info: "histogram".png used on input line 261.
 (pdftex.def)             Requested size: 452.9679pt x 454.31993pt.
- <"boxplot".png, id=46, 1606.0pt x 1606.0pt>
+
+<"boxplot".png, id=56, 1606.0pt x 1606.0pt>
 File: "boxplot".png Graphic file (type png)
-
-<use "boxplot".png>
-Package pdftex.def Info: "boxplot".png used on input line 230.
+ <use "boxplot".png>
+Package pdftex.def Info: "boxplot".png used on input line 270.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- <"qqplot".png, id=47, 1606.0pt x 1606.0pt>
+
+<"qqplot".png, id=57, 1606.0pt x 1606.0pt>
 File: "qqplot".png Graphic file (type png)
-
-<use "qqplot".png>
-Package pdftex.def Info: "qqplot".png used on input line 236.
+ <use "qqplot".png>
+Package pdftex.def Info: "qqplot".png used on input line 276.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- <"scatterplot".png, id=48, 1606.0pt x 1606.0pt>
+
+<"scatterplot".png, id=58, 1606.0pt x 1606.0pt>
 File: "scatterplot".png Graphic file (type png)
-
-<use "scatterplot".png>
-Package pdftex.def Info: "scatterplot".png used on input line 244.
+ <use "scatterplot".png>
+Package pdftex.def Info: "scatterplot".png used on input line 284.
 (pdftex.def)             Requested size: 452.9679pt x 452.9607pt.
- [9] [10 <./histogram.png>] [11 <./boxplot.png>]
-[12 <./qqplot.png (PNG copy)>] [13 <./scatterplot.png (PNG copy)>]
+
+[11] [12 <./histogram.png>] [13 <./boxplot.png>] [14 <./qqplot.png (PNG copy)>]
+[15 <./scatterplot.png (PNG copy)>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pcaind.png, id=66, 1606.0pt x 803.0pt>
+<pcaind.png, id=76, 1606.0pt x 803.0pt>
 File: pcaind.png Graphic file (type png)
  <use pcaind.png>
-Package pdftex.def Info: pcaind.png used on input line 323.
+Package pdftex.def Info: pcaind.png used on input line 363.
 (pdftex.def)             Requested size: 452.9679pt x 226.48033pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] <"single-pca".jpeg, id=70, 645.16031pt x 409.53pt>
-File: "single-pca".jpeg Graphic file (type jpg)
+[16] <contrib.jpeg, id=80, 645.16031pt x 409.53pt>
+File: contrib.jpeg Graphic file (type jpg)
+ <use contrib.jpeg>
+Package pdftex.def Info: contrib.jpeg used on input line 373.
+(pdftex.def)             Requested size: 452.9679pt x 287.53139pt.
+File: "biplot-mca".jpeg Graphic file (type jpg)
 
-<use "single-pca".jpeg>
-Package pdftex.def Info: "single-pca".jpeg used on input line 340.
-(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
- <"complete-pca".jpeg, id=71, 645.16031pt x 409.53pt>
+<use "biplot-mca".jpeg>
+Package pdftex.def Info: "biplot-mca".jpeg used on input line 383.
+(pdftex.def)             Requested size: 452.9679pt x 287.53139pt.
+ <"biplot-nona".jpeg, id=81, 645.16031pt x 409.53pt>
+File: "biplot-nona".jpeg Graphic file (type jpg)
+
+<use "biplot-nona".jpeg>
+Package pdftex.def Info: "biplot-nona".jpeg used on input line 391.
+(pdftex.def)             Requested size: 452.9679pt x 287.53139pt.
+File: "mca-eigen".jpeg Graphic file (type jpg)
+ <use "mca-eigen".jpeg>
+Package pdftex.def Info: "mca-eigen".jpeg used on input line 400.
+(pdftex.def)             Requested size: 452.9679pt x 287.53139pt.
+File: "single-pca".jpeg Graphic file (type jpg)
+ <use "single-pca".jpeg>
+Package pdftex.def Info: "single-pca".jpeg used on input line 414.
+(pdftex.def)             Requested size: 362.37569pt x 230.02261pt.
 File: "complete-pca".jpeg Graphic file (type jpg)
 
 <use "complete-pca".jpeg>
-Package pdftex.def Info: "complete-pca".jpeg used on input line 343.
-(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
- <"ward-pca".jpeg, id=72, 645.16031pt x 409.53pt>
+Package pdftex.def Info: "complete-pca".jpeg used on input line 417.
+(pdftex.def)             Requested size: 362.37569pt x 230.02261pt.
 File: "ward-pca".jpeg Graphic file (type jpg)
+ <use "ward-pca".jpeg>
+Package pdftex.def Info: "ward-pca".jpeg used on input line 420.
+(pdftex.def)             Requested size: 362.37569pt x 230.02261pt.
 
-<use "ward-pca".jpeg>
-Package pdftex.def Info: "ward-pca".jpeg used on input line 346.
-(pdftex.def)             Requested size: 181.18439pt x 115.00505pt.
- [15 <./pcaind.png>] [16 <./single-pca.jpeg> <./complete-pca.jpeg> <./ward-pca.
-jpeg>] (./Projet-rapport.aux) ) 
+
+LaTeX Warning: Float too large for page by 104.84431pt on input line 424.
+
+[17 <./pcaind.png>] [18 <./contrib.jpeg>] [19 <./biplot-nona.jpeg>] [20]
+(./Projet-rapport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6211 strings out of 493013
- 80452 string characters out of 6139316
- 194789 words of memory out of 5000000
- 9615 multiletter control sequences out of 15000+600000
- 14055 words of font info for 54 fonts, out of 8000000 for 9000
+ 5267 strings out of 493013
+ 71370 string characters out of 6139316
+ 165748 words of memory out of 5000000
+ 8670 multiletter control sequences out of 15000+600000
+ 13709 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,8n,72p,1217b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Projet-rapport.pdf (16 pages, 2571753 bytes).
+ 40i,8n,37p,1217b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Projet-rapport.pdf (20 pages, 3094564 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
