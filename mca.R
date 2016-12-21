@@ -24,6 +24,7 @@ str(wine_pca)
 ##MCA
 MCA(wine_pca) #MCA : Variables
 mc<-MCA(wine_pca, graph = F)
+mc2<-MCA(wine_pca, graph = F, na.method = "Average")
 mc
 summary(mc)
 
@@ -38,14 +39,16 @@ categories <- rownames(cat$coord)
 categories
 plot(mc) #Biplot des variables et individus
 fviz_mca_biplot(mc) #Similaire mais en plus beau
+fviz_mca_biplot(mc2) #Similaire mais en plus beau, sans NA
 fviz_mca_var(mc) #graphiques reprenant uniquement les catégories
 fviz_mca_ind(mc) #graphiques reprenant uniquement les individus
 
 plot(mc, choix = "var")#visualisation des variable
 
 ##contributions des categories aux différentes dimensions
-round(var$coord, 2)
-corrplot(var$contrib, is.corr = FALSE)
-fviz_contrib(mc, choice = "var", axes = 1)
-fviz_contrib(mc, choice = "var", axes = 2, top = 10)
+round(cat$coord, 2)
+corrplot(cat$contrib, is.corr = FALSE)
+fviz_contrib(mc, choice = "cat", axes = 1)
+fviz_contrib(mc, choice = "cat", axes = 2, top = 10)
+cat$cos2
 
