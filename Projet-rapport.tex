@@ -139,7 +139,7 @@ La première question est de savoir combien de  dimensions conserver. Pour répo
 
 On peut donc constater que la proportion de variance expliquée par les différentes dimensions décroît lentement. Puisqu'il nous faut choisir un nombre de dimensions restreint pour expliquer nos données, il nous faut choisir également un critère de décision. Un premier critère est celui du "coup de coude" : Il s'agit de choisir le nombre de dimension à partir duquel la valeur des valeurs propres décroit brusquement. Un "coup de coude" peut être trouvé a plusieurs endroits, entre autre aux alentours de la 4eme dimension (mais également après deux dimensions), mais en ne choisissant que 4 dimensions, on ne peut expliquer que 30\% de la variance. Un second critère consiste à choisir les dimensions pour lesquelles la valeur propres est supérieure à $\frac{1}{nbvar}$. Ce second critère nous pousse à choisir 10 dimensions, ce qui est fort élevé. On pourrait également choisir comme critère le \% de variance expliquée, en fixant par exemple le seuil à 60\%. Ce critère nous pousserait également à choisir 10 variables. On utilisera  donc au final les 4 premières dimensions.\bigskip
 
-On peut également s'intéresser aux positions des individus, variables et categories dans les deux premières dimensions :
+On peut également s'intéresser aux positions des individus et categories dans les deux premières dimensions :
 
 \begin{center}
 \includegraphics[scale=0.6]{"biplot-mca"}
@@ -372,6 +372,36 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \label{fig:contrib}
 \end{figure}
 
+
+
+\begin{figure}
+
+\includegraphics[width=\textwidth,keepaspectratio]{"biplot-mca"}
+
+\caption{Catégories dans le plan des premiers axes}
+\label{fig:biplot}
+\end{figure}
+
+\begin{figure}
+
+\includegraphics[width=\textwidth,keepaspectratio]{"biplot-nona"}
+
+\caption{Données et catégories dans le plan des premiers axes avec NA remplacés par la moyenne}
+\label{fig:biplot}
+\end{figure}
+
+
+\begin{figure}
+
+\includegraphics[width=\textwidth,keepaspectratio]{"mca-eigen"}
+
+\caption{Valeurs propres de la NCA}
+\label{fig:screeplot}
+\end{figure}
+
+\FloatBarrier
+
+
 \subsection{Clustering}
 
 \begin{figure}[t]
@@ -389,14 +419,5 @@ Une fois le clustering terminé, on peut passer à l'analyse discriminante et s'
 \caption{Comparaison des méthode de clustering}
 \label{fig:whatever}
 \end{figure}
-
-
-
-
-\section{Code R}
-\lstset{language=R}
-\begin{lstlisting}[breaklines]
-##Code ici
-\end{lstlisting}
 
 \end{document}
